@@ -3,13 +3,12 @@ import { Navbar, PostDetail, Home, CreatePost } from './index';
 
 function App() {
     return (
-        <div className="App">
+        <div className="container">
+            <Navbar />
             <Routes>
-                <Route>
-                    <Route path="/" element={Home} />
-                    <Route path="/post/:postId" element={PostDetail} />
-                    <Route path="/create-post" element={CreatePost} />
-                </Route>
+                <Route path="/" element={<Home />} />
+                <Route path="/post/:postId" element={<PostDetail />} />
+                <Route path="/create-post" element={<CreatePost />} />
             </Routes>
         </div>
     );
